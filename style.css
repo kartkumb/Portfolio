@@ -54,23 +54,33 @@ nav ul li a:hover {
     max-width: 800px;
     position: relative;
     padding: 2rem 0;
+
+    /* Mobile scroll support */
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #ff9800 #f4f4f4;
 }
 
+/* Timeline background line */
 .timeline::before {
     content: "";
     position: absolute;
     top: 50%;
     left: 0;
-    width: 100%;
     height: 4px;
-    background: #06f727;
+    background: #ff9800;
     z-index: 0;
+    width: 100%;
 }
 
+/* Each timeline point */
 .timeline-item {
     position: relative;
     text-align: center;
     z-index: 1;
+    display: inline-block; /* Needed for scrollable layout */
+    min-width: 150px; /* Prevents items from being too small */
 }
 
 .timeline-dot {
@@ -107,6 +117,18 @@ nav ul li a:hover {
 .timeline-year {
     margin-top: 10px;
     font-weight: bold;
+}
+
+/* Mobile scroll styling */
+.timeline::-webkit-scrollbar {
+    height: 6px;
+}
+.timeline::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+.timeline::-webkit-scrollbar-thumb {
+    background: #ff9800;
+    border-radius: 10px;
 }
 
 /* Hero Section */
