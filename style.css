@@ -45,7 +45,88 @@ nav ul li a:hover {
     color: #ff9800;
 }
 
+/* Timeline Section */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem auto;
+    max-width: 800px;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #06f727;
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: #ff9800;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+/* Tooltip styling */
+.timeline-item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    font-size: 0.9rem;
+}
+
+.timeline-item:hover::after {
+    opacity: 1;
+}
+
+.timeline-year {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
 /* Hero Section */
+
+.hero {
+    background: #333;
+    color: #fff;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 180px; /* Adjust size */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes it a circle */
+    border: 4px solid #ff9800;
+    margin-bottom: 1rem;
+}
+
 .hero {
     background: #333;
     color: #fff;
