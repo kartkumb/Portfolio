@@ -1,8 +1,6 @@
 /**
 Name :-  Kartikeya Deepak Kumbhar
-Class:-  SE    Div – 3    Batch- B
-Roll Number :-   205C039
-Assignment No.:- 1
+
 Title:-  Implement a robust Java calculator program that captures user input 
 		dynamically, processes mathematical operations using conditional logic 
 		and looping constructs, and ensures efficient error handling.
